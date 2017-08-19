@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Simple BlackJack Game</title>
+   <link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+ 
+<video id="fullscreen" preload="auto" autoplay="true"  loop="loop"  muted="muted">
+<source src="bellagio.mp4" type="video/mp4">
+<source src="bellagio.webm" type="video/webm">
+<source src="bellagio.ogv" type="video/ogg">
+</video>
+         
+<div class="container-fluid">
+     <h1 class="title">BlackJack Game</h1>
+      <div id="message">Press Start Button</div>
+      <div id="start">
+        <button id="btnstart" type="button" onclick="Start()" class="btn">Start Game</button>
+      </div>
+      <div class="total">Total $<span id="dollars">100</span><br>Bet Amount $<input type="number" id="mybet" value="5" min="1" max="100"><button id="maxbet" type="button" onclick="maxbet()" class="btn">All IN BET</button>
+      </div>
+      <div id="output">
+        Dealer Hand : <span id="dValue"></span>
+        <div id="dealerHolder"></div>
+        Player Hand : <span id="pValue"></span>
+        <div id="playerHolder"></div>
+        <div id="myactions">
+          <button id="btnhold" type="button" onclick="cardAction('hold')" class="btn">Hold</button>
+          <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn">Hit</button>
+          <button id="btndouble" type="button" onclick="cardAction('double')" class="btn">Double</button>
+        </div>
+        <div>
+          <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+        </div>
+      </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="blackjack.js"></script> 
+</body>
+</html>
